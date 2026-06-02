@@ -7,7 +7,6 @@ jobs:
     steps:
       - run : echo "Hola, este es un saludo desde CircleCI"
 
-
 workflows:
   hello:
     jobs:
