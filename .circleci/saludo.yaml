@@ -1,0 +1,14 @@
+version: 2.1
+
+jobs:
+  saludo:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run : echo "Hola, este es un saludo desde CircleCI"
+
+
+workflows:
+  hello:
+    jobs:
+      - saludo
