@@ -7,7 +7,17 @@ jobs:
     steps:
       - run : echo "Hola, este es un saludo desde CircleCI"
 
+  despidete:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run : echo "chao 1"
+      - run : echo "chao 2"
+      - run : echo "chao 3"
+
+
 workflows:
   hello:
     jobs:
       - saludo
+      - despidete
