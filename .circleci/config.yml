@@ -11,7 +11,7 @@ jobs:
           name: Ver repo
           command: |
             ls -la
-            echo "CircleCI funcionando OK"
+            echo "CircleCI funcionando OK ok"
 
 workflows:
   test-workflow:
