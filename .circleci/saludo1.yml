@@ -1,11 +1,17 @@
 version: 2.1
 
+parameters:
+  nombre:
+    type: string
+    default: "Jairo"
+
 jobs:
   saludo:
     docker:
       - image: cimg/base:stable
     steps:
-      - run : echo "Hola, este es un saludo desde CircleCI"
+      - run:
+          command: echo "Hola, este es un saludo desde CircleCI por parte de << pipeline.parameters.nombre >>"
 
   despidete:
     docker:
