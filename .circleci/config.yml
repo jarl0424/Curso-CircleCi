@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  prueba:
+  prueba_nueva:
     docker:
       - image: ubuntu:latest
     steps:
@@ -10,4 +10,4 @@ jobs:
 workflows:
   test-workflow:
     jobs:
-      - prueba
+      - prueba_nueva
