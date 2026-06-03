@@ -39,14 +39,7 @@ workflows:
             - approval
 
   workflows4:
-    triggers:
-      - schedule:
-           # 02:22 UTC = 9:22 p. m. en Colombia (America/Bogota, UTC-5)
-           cron: "22 2 * * *"
-           filters:
-             branches:
-               only: main
-
     jobs:
       - saludo
       - despidete
+  
