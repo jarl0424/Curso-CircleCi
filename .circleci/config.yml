@@ -2,8 +2,12 @@ version: 2.1
 
 commands:
   dime_la_hora_y_espera:
+    parameters:
+      tiempo:
+        type: integer
+        default: 10
     steps:
-      - run: date && sleep 10
+      - run: date && sleep << parameters.tiempo >>
 
 jobs:
   saluda:
@@ -18,9 +22,11 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - dime_la_hora_y_espera
+      - dime_la_hora_y_espera:
+          tiempo: 5
       - run: echo adios
-      - dime_la_hora_y_espera
+      - dime_la_hora_y_espera:
+          tiempo: 10
 
 workflows:
   workflow1:
