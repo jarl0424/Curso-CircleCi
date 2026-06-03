@@ -1,19 +1,13 @@
 version: 2.1
 
 jobs:
-  test:
+  prueba:
     docker:
-      - image: cimg/base:stable
+      - image: ubuntu:latest
     steps:
-      - checkout
-
-      - run:
-          name: Ver repo
-          command: |
-            ls -la
-            echo "CircleCI funcionando OK ok ok jairo"
+      - run: echo hola
 
 workflows:
   test-workflow:
     jobs:
-      - test
+      - prueba
